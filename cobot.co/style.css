@@ -1,0 +1,271 @@
+@font-face {
+    font-display: swap;
+    font-family: Roobert;
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/Roobert-Medium.woff2.woff2) format("woff2"), url(fonts/Roobert-Medium.woff.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Roobert;
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/Roobert-Bold.woff2.woff2) format("woff2"), url(fonts/Roobert-Bold.woff.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Roobert;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Roobert-Regular.woff2.woff2) format("woff2"), url(fonts/Roobert-Regular.woff.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Roobert;
+    font-style: normal;
+    font-weight: 600;
+    src: url(fonts/Roobert-SemiBold.woff2.woff2) format("woff2"), url(fonts/Roobert-SemiBold.woff.woff) format("woff")
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body,
+html {
+    -webkit-font-smoothing: antialiased;
+    font-family: Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background: #EBEBEB;
+    color: rgba(0, 0, 0, 0.80);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 64px;
+    flex-shrink: 0;
+}
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.twitter {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#main {
+    padding: 64px 24px;
+}
+h1 {
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 24px;
+    font-weight: 600;
+}
+#main h2 {
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 8px 0 24px;
+}
+
+#button-container {
+    border-radius: 28px;
+    display: inline-block;
+    margin-bottom: 24px;
+    height: 56px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #fff 0%, #4d4d4d 50%, #ffcdf7 88%);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08), 0px 0px 1px 1px rgba(0, 0, 0, 0.25) inset;
+    padding: 3px;
+    position: relative;
+}
+#button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 28px;
+    color: #fff;
+    padding: 0 32px;
+    background: linear-gradient(180deg, #C4C4C4 0%, #797A7A 100%);
+    z-index: 1;
+    position: relative;
+}
+#button span {
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.50);
+    margin-top: -3px;
+}
+
+#button-shadow-1 {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    border-radius: 100px;
+    opacity: 0.5;
+    background: linear-gradient(92deg, #5BA1FF -36.06%, #E975FF 22.63%, #FF6161 77.25%, #FFAA54 126.98%);
+    filter: blur(24px);
+    width: 106px;
+    height: 16px;
+}
+
+#button-shadow-2 {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    border-radius: 100px;
+    opacity: 0.5;
+    background: linear-gradient(92deg, #5BA1FF -36.06%, #E975FF 22.63%, #FF6161 77.25%, #FFAA54 126.98%);
+    filter: blur(12px);
+    width: 106px;
+    height: 16px;
+}
+
+#button-shadow-3 {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    border-radius: 100px;
+    opacity: 0.25;
+    background: linear-gradient(92deg, #5BA1FF -36.06%, #E975FF 22.63%, #FF6161 77.25%, #FFAA54 126.98%);
+    filter: blur(24px);
+    width: 106px;
+    height: 16px;
+}
+
+#hover {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(125.34% 30.72% at 50.16% 50%, rgba(255, 255, 255, 0.20) 0%, #FFF 100%);
+    border-radius: 100px;
+    opacity: 0.12;
+}
+#button-container:hover #hover {
+    display: block;
+}
+#button-container:hover:active #hover {
+    display: none;
+}
+#button-container:active {
+    background: linear-gradient(180deg, #9a9a9a 0%, #414141 50%, #B39EAF 100%);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25) inset;
+}
+#button-container:active #button {
+    background: var(--Primary-Button-Pressed-Main-Gradient, linear-gradient(180deg, #ABABAB 0%, #797A7A 100%));
+    background: var(--Primary-Button-Pressed-Main-Gradient, linear-gradient(180deg, color(display-p3 0.67 0.67 0.67) 0%, color(display-p3 0.4745 0.4784 0.4784) 100%));
+}
+#button-container:active span {
+    opacity: 0.7;
+}
+#button-container:active .shadow {
+    opacity: 0.25;
+}
+.mainframe {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.mainframe span {
+    font-size: 14px;
+    -webkit-font-feature-settings: "salt" on, 'ss01' on;
+    font-feature-settings: 'salt' on, 'ss01' on;
+}
+
+#phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    padding-bottom: 64px;
+}
+#phone {
+    margin: 0 auto;
+    width: 393px;
+    height: 852px;
+    background: #fff;
+    border-radius: 56px;
+    border: 4px solid rgba(0, 0, 0, 0.80);
+    background: #FFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.24), 0px 24px 40px 0px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    flex-shrink: 0;
+    /* fill width and contain aspect ratio */
+    object-fit: contain;
+}
+#phone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#spacer {
+    flex: 1;
+}
+
+#bg {
+    width: 100%;
+    max-width: 640px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* max height 960px or max width 480px */
+@media (max-width: 480px) {
+    #main {
+        padding: 32px 24px;
+    }
+}
